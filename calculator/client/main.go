@@ -5,7 +5,7 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 
-	pb "github.com/shukra-in-spirit/udemy_grpc/greet/proto"
+	pb "github.com/shukra-in-spirit/udemy_grpc/calculator/proto"
 )
 
 var addr string = "localhost:50051"
@@ -18,7 +18,7 @@ func main() {
 	}
 	defer conn.Close()
 
-	c := pb.NewGreetServiceClient(conn)
+	c := pb.NewCalculatorServiceClient(conn)
 	
-	doGreet(c)
+	doCalculate(c)
 }
