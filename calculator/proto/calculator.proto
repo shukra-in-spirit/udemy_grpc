@@ -13,6 +13,11 @@ message CalculatorResponse {
     int64 result = 1;
 }
 
+message FactorRequest {
+    int64 num = 1;
+}
+
 service CalculatorService {
     rpc Calculator (CalculatorRequest) returns (CalculatorResponse);
+    rpc Factors (FactorRequest) returns (stream CalculatorResponse);
 }
