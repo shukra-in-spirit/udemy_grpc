@@ -22,5 +22,6 @@ func main() {
 
 	// doCalculate(c)
 	// doFactorize(c)
-	doAverage(c)
+	// doAverage(c)
+	doMax(c)
 }
