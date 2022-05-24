@@ -17,7 +17,16 @@ message FactorRequest {
     int64 num = 1;
 }
 
+message AverageRequest {
+    float num = 1;
+}
+
+message AverageResponse {
+    float result = 1;
+}
+
 service CalculatorService {
     rpc Calculator (CalculatorRequest) returns (CalculatorResponse);
     rpc Factors (FactorRequest) returns (stream CalculatorResponse);
+    rpc Average (stream AverageRequest) returns (AverageResponse);
 }
