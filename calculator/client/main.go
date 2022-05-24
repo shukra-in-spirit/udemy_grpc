@@ -21,5 +21,6 @@ func main() {
 	c := pb.NewCalculatorServiceClient(conn)
 
 	// doCalculate(c)
-	doFactorize(c)
+	// doFactorize(c)
+	doAverage(c)
 }
