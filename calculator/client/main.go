@@ -23,5 +23,6 @@ func main() {
 	// doCalculate(c)
 	// doFactorize(c)
 	// doAverage(c)
-	doMax(c)
+	// doMax(c)
+	doSqrt(c, -10)
 }

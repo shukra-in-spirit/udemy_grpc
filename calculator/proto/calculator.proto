@@ -4,6 +4,8 @@ package calculator;
 
 option go_package = "github.com/shukra-in-spirit/udemy_grpc/calculator/proto";
 
+import "sqrt.proto";
+
 message CalculatorRequest {
     int64 first_num = 1;
     int64 second_num = 2;
@@ -38,4 +40,5 @@ service CalculatorService {
     rpc Factors (FactorRequest) returns (stream CalculatorResponse);
     rpc Average (stream AverageRequest) returns (AverageResponse);
     rpc Max(stream MaxRequest) returns (stream MaxResponse);
+    rpc Sqrt(SqrtRequest) returns (SqrtResponse);
 }
